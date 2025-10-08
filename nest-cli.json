@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/virtual-facility/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/virtual-facility/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/virtual-facility",
+  "projects": {
+    "alarm-generator": {
+      "type": "application",
+      "root": "apps/alarm-generator",
+      "entryFile": "main",
+      "sourceRoot": "apps/alarm-generator/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/alarm-generator/tsconfig.app.json"
+      }
+    },
+    "alarm-service": {
+      "type": "application",
+      "root": "apps/alarm-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/alarm-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/alarm-service/tsconfig.app.json"
+      }
+    },
+    "alarms-classifier-service": {
+      "type": "application",
+      "root": "apps/alarms-classifier-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/alarms-classifier-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/alarms-classifier-service/tsconfig.app.json"
+      }
+    },
+    "notification-service": {
+      "type": "application",
+      "root": "apps/notification-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/notification-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/notification-service/tsconfig.app.json"
+      }
+    },
+    "virtual-facility": {
+      "type": "application",
+      "root": "apps/virtual-facility",
+      "entryFile": "main",
+      "sourceRoot": "apps/virtual-facility/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/virtual-facility/tsconfig.app.json"
+      }
+    },
+    "workflow-service": {
+      "type": "application",
+      "root": "apps/workflow-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/workflow-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/workflow-service/tsconfig.app.json"
+      }
+    },
+    "workflows": {
+      "type": "library",
+      "root": "libs/workflows",
+      "entryFile": "index",
+      "sourceRoot": "libs/workflows/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/workflows/tsconfig.lib.json"
+      }
+    }
+  }
+}
