@@ -7,8 +7,6 @@ export class AlarmsClassifierServiceController {
 
   @MessagePattern('alarm.classify')
   classifyAlarm(@Payload() data: unknown) {
-    // In a real application, this service would classify alarms using AI/ML
-    // and return a category.
     this.logger.debug(
       `Received new "alarm.classify" message: ${JSON.stringify(data)}`,
     );

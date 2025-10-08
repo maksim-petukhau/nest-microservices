@@ -1,5 +1,4 @@
-import { Controller, Get, Inject, Logger } from '@nestjs/common';
-import { AlarmServiceService } from './alarm-service.service';
+import { Controller, Inject, Logger } from '@nestjs/common';
 import { ClientProxy, EventPattern, Payload } from '@nestjs/microservices';
 import { MESSAGE_BROKER } from './constants';
 import { lastValueFrom } from 'rxjs';

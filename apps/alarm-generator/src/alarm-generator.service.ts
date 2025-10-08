@@ -10,7 +10,7 @@ export class AlarmGeneratorService {
     private readonly alarmClient: ClientProxy,
   ) {}
 
-  //@Interval(1000)
+  @Interval(1000)
   async generateAlarms() {
     console.log('Generating alarm');
     const alarmEvent = {

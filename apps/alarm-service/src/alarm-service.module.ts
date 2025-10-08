@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { AlarmServiceController } from './alarm-service.controller';
-import { AlarmServiceService } from './alarm-service.service';
 import { MESSAGE_BROKER } from './constants';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 
@@ -17,6 +16,6 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
     ]),
   ],
   controllers: [AlarmServiceController],
-  providers: [AlarmServiceService],
+  providers: [],
 })
 export class AlarmServiceModule {}
